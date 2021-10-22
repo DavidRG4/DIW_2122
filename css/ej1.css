@@ -1,0 +1,43 @@
+header h1 {
+    text-transform: capitalize;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    padding: 10px;
+}
+
+li:nth-of-type(2) a {
+    background-color: red;
+}
+
+article {
+    border: 1px solid;
+}
+
+.titulo {
+    background: linear-gradient(to bottom, gray, white);
+    background: linear-gradient(to bottom, white, gray);
+    padding-left: 10px;
+    margin: 5px;
+}
+
+section ul {
+    list-style-image: url(/img/estrella.png);
+}
