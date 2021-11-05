@@ -1,0 +1,36 @@
+.container {
+    display: grid;
+    grid-template-columns: 15% 85%;
+    grid-gap: 1rem;
+    padding: 10px;
+}
+
+.derch {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 1rem;
+    padding: 10px;
+    border: solid 1px block;
+}
+
+.rosa {
+    background-color: mediumvioletred;
+    grid-column: 1/span 3;
+}
+
+.marron {
+    background-color: burlywood;
+    grid-column: 1/span 3;
+    grid-row: span 1;
+}
+
+@media (max-width:499px) {
+    aside {
+        float: left;
+        width: 100%;
+    }
+    article section {
+        float: left;
+        width: 100%;
+    }
+}
