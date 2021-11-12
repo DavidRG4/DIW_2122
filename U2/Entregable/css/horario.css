@@ -1,14 +1,69 @@
+.flex-container .red {
+  background-color: red;
+}
+.flex-container .amarillo {
+  background-color: goldenrod;
+}
+.flex-container .blue {
+  background-color: aqua;
+}
+.flex-container .vacio {
+  height: 100px;
+}
 .flex-container div {
   background-color: gray;
   padding: 1rem;
   color: white;
+  margin-top: 10px;
 }
-.flex-container .horario {
-  background-color: #393838;
-}
+
 .flex-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  align-content: stretch;
+}
+
+.hora {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.lunes {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.martes {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.miercoles {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.jueves {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.viernes {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.sabado {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.domingo {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
