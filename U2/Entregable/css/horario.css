@@ -1,0 +1,14 @@
+.flex-container div {
+  background-color: gray;
+  padding: 1rem;
+  color: white;
+}
+.flex-container .horario {
+  background-color: #393838;
+}
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: stretch;
+}

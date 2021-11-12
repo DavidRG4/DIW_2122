@@ -1,36 +1,78 @@
+body {
+  background-color: white;
+}
+div {
+  padding: 2rem;
+}
+.header {
+  background-color: green;
+  grid-column: 1 / span 2;
+  border: 1px solid black;
+}
+.footer {
+  background-color: green;
+  grid-column: 1 / span 2;
+  border: 1px solid black;
+}
 .container {
-    display: grid;
-    grid-template-columns: 15% 85%;
-    grid-gap: 1rem;
-    padding: 10px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-gap: 0.5rem;
+  padding: 10px;
 }
 
 .derch {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 1rem;
-    padding: 10px;
-    border: solid 1px block;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 0.5rem;
+  padding: 5px;
+  border: 1px solid black;
 }
-
+.izq {
+  background-color: red;
+  border: 1px solid black;
+}
 .rosa {
-    background-color: mediumvioletred;
-    grid-column: 1/span 3;
+  background-color: mediumvioletred;
+  grid-column: 1 / span 3;
 }
 
 .marron {
-    background-color: burlywood;
-    grid-column: 1/span 3;
-    grid-row: span 1;
+  background-color: burlywood;
+  grid-column: 1 / span 3;
+  padding: 3rem;
+}
+.azul {
+  background-color: blue;
 }
 
-@media (max-width:499px) {
-    aside {
-        float: left;
-        width: 100%;
-    }
-    article section {
-        float: left;
-        width: 100%;
-    }
+@media (max-width: 499px) {
+  .izq {
+    display: none;
+  }
+  .header {
+    background-color: green;
+    grid-column: 1;
+  }
+  .footer {
+    background-color: green;
+    grid-column: 1;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .derch {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .rosa {
+    background-color: mediumvioletred;
+    grid-column: 1 / span 2;
+  }
+
+  .marron {
+    background-color: burlywood;
+    grid-column: 1 / span 2;
+  }
 }
