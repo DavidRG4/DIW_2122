@@ -1,0 +1,37 @@
+@import "base.scss";
+@import "components.scss";
+body {
+  @include backColor($color2);
+}
+
+header {
+  background-color: $color4;
+  display: flex;
+  justify-content: space-between;
+  .logo {
+    @include size(20%, 100%);
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-template-rows: auto;
+  aside {
+    background-color: $color1;
+  }
+  .graficas {
+    @include backColor($color3);
+    @include size(100%, 100%);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 25% 25% 25%;
+    div {
+      @include size(100%, 100%);
+    }
+  }
+}
+footer {
+  @include backColor($color5);
+  text-align: center;
+}

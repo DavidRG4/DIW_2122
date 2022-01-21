@@ -1,0 +1,10 @@
+$color1: #59a3d7;
+$color2: #b4daf5;
+$color3: #81bde7;
+$color4: #398bc5;
+$color5: #1971b0;
+$white: #ffffff;
+
+@mixin backColor($color) {
+  background-color: $color;
+}
