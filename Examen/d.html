@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p:first-child::before {
+        content: "✖";
+        color: green;
+      }
+      p:last-child::first-letter {
+        color: red;
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <p>La primera letra no se ve en rojo</p>
+
+    <p>Pero la primera de éste sí.</p>
+  </body>
+</html>
