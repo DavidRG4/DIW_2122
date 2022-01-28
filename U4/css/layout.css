@@ -4,10 +4,25 @@ body {
 header {
   background-color: #398bc5;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: center; }
   header .logo {
-    width: 20%;
-    height: 100%; }
+    width: 15%;
+    height: 100%;
+    margin: 10px 10px; }
+  header h1 {
+    color: #ffffff;
+    font-family: "Fredoka One", cursive;
+    font-size: 3rem; }
+  header figure {
+    text-align: center;
+    padding: 1rem; }
+    header figure img {
+      display: inline-block; }
+    header figure figcaption {
+      display: inline-block;
+      color: #ffffff;
+      margin: 0; }
 
 .container {
   display: grid;
@@ -15,17 +30,42 @@ header {
   grid-template-rows: auto; }
   .container aside {
     background-color: #59a3d7; }
+    .container aside ul {
+      margin: 1rem auto;
+      padding: 0;
+      list-style: none; }
+      .container aside ul li {
+        text-align: center;
+        padding: 1rem; }
   .container .graficas {
     background-color: #81bde7;
     width: 100%;
     height: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 25% 25% 25% 25%; }
-    .container .graficas div {
+    grid-template-rows: 25% 25% 25% 25%;
+    justify-content: center; }
+    .container .graficas al div {
       width: 100%;
       height: 100%; }
 
+#line_top_x {
+  grid-column: 1 / span 2; }
+
+#piechart {
+  width: 80%;
+  height: 100%;
+  background-color: none; }
+
+#chart_areas {
+  grid-column: 1 / span 2; }
+
 footer {
+  width: 100%;
+  height: 100%;
   background-color: #1971b0;
-  text-align: center; }
+  text-align: center;
+  color: #ffffff; }
+  footer p {
+    padding: 10px;
+    margin: 0; }
