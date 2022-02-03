@@ -1,8 +1,6 @@
 google.charts.load("current", { packages: ["corechart"] });
 google.charts.load("current", { packages: ["line"] });
 google.charts.load("current", { packages: ["gauge"] });
-google.charts.load("current", { packages: ["corechart"] });
-google.charts.load("current", { packages: ["corechart"] });
 google.charts.load("current", { packages: ["bar"] });
 
 google.charts.setOnLoadCallback(draw);
@@ -12,21 +10,21 @@ function draw() {
   drawDonut();
   drawLines();
   drawMedidores();
+  drawStuff();
   drawLinesArea();
 }
 //----------------------------------------------------------
 function drawPie() {
   var data = google.visualization.arrayToDataTable([
     ["Task", "Hours per Day"],
-    ["Work", 11],
-    ["Eat", 2],
-    ["Commute", 2],
-    ["Watch TV", 2],
-    ["Sleep", 7],
+    ["TV", 2],
+    ["Mobil", 30],
+    ["PC", 60],
+    ["Micelanios", 8],
   ]);
 
   var options = {
-    title: "My Daily Activities",
+    title: "Porcentaje de uso por elemento al dia",
   };
 
   var chart = new google.visualization.PieChart(
@@ -40,33 +38,30 @@ function drawPie() {
 function drawLines() {
   var data = new google.visualization.DataTable();
   data.addColumn("number", "Day");
-  data.addColumn("number", "Guardians of the Galaxy");
-  data.addColumn("number", "The Avengers");
-  data.addColumn("number", "Transformers: Age of Extinction");
+  data.addColumn("number", "2019");
+  data.addColumn("number", "2020");
+  data.addColumn("number", "2021");
 
   data.addRows([
-    [1, 37.8, 80.8, 41.8],
-    [2, 30.9, 69.5, 32.4],
-    [3, 25.4, 57, 25.7],
-    [4, 11.7, 18.8, 10.5],
-    [5, 11.9, 17.6, 10.4],
-    [6, 8.8, 13.6, 7.7],
-    [7, 7.6, 12.3, 9.6],
-    [8, 12.3, 29.2, 10.6],
-    [9, 16.9, 42.9, 14.8],
-    [10, 12.8, 30.9, 11.6],
-    [11, 5.3, 7.9, 4.7],
-    [12, 6.6, 8.4, 5.2],
-    [13, 4.8, 6.3, 3.6],
-    [14, 4.2, 6.2, 3.4],
+    [1, 2.5, 3.2, 4.5],
+    [2, 2.6, 2.9, 4.4],
+    [3, 2.4, 2.9, 4.6],
+    [4, 1.9, 3, 4],
+    [5, 2.3, 3.5, 4.9],
+    [6, 3, 3.8, 3.6],
+    [7, 2.9, 3.8, 3.9],
+    [8, 3.2, 4, 4.3],
+    [9, 3.3, 4.2, 4.7],
+    [10, 2, 3.4, 5],
+    [11, 2.1, 3.7, 4.8],
+    [12, 3, 4.5, 5.1],
   ]);
 
   var options = {
     chart: {
-      title: "Box Office Earnings in First Two Weeks of Opening",
-      subtitle: "in millions of dollars (USD)",
+      title: "Comparacion de GB gastados al mes en los ultimos años",
     },
-    width: "100%",
+    width: "80%",
     height: "100%",
   };
 
@@ -86,8 +81,6 @@ function drawMedidores() {
   ]);
 
   var options = {
-    width: 400,
-    height: 120,
     redFrom: 90,
     redTo: 100,
     yellowFrom: 75,
@@ -119,16 +112,16 @@ function drawMedidores() {
 
 function drawLinesArea() {
   var data = google.visualization.arrayToDataTable([
-    ["Year", "Sales", "Expenses"],
-    ["2013", 1000, 400],
-    ["2014", 1170, 460],
-    ["2015", 660, 1120],
-    ["2016", 1030, 540],
+    ["Year", "Ventas", "Gastos"],
+    ["2018", 1000, 400],
+    ["2019", 1170, 460],
+    ["2020", 660, 1120],
+    ["20", 1030, 540],
   ]);
 
   var options = {
-    title: "Company Performance",
-    hAxis: { title: "Year", titleTextStyle: { color: "#333" } },
+    title: "Desempeño de la compañía",
+    hAxis: { title: "Años", titleTextStyle: { color: "#333" } },
     vAxis: { minValue: 0 },
   };
 
@@ -141,16 +134,15 @@ function drawLinesArea() {
 function drawDonut() {
   var data = google.visualization.arrayToDataTable([
     ["Task", "Hours per Day"],
-    ["Work", 11],
-    ["Eat", 2],
-    ["Commute", 2],
-    ["Watch TV", 2],
-    ["Sleep", 7],
+    ["TV", 4],
+    ["Mobil", 32],
+    ["PC", 54],
+    ["Micelanios", 10],
   ]);
 
   var options = {
-    title: "My Daily Activities",
-    pieHole: 0.4,
+    title: "Porcentaje de uso por elemento del mes pasado",
+    pieHole: 0.3,
   };
 
   var chart = new google.visualization.PieChart(
@@ -159,33 +151,23 @@ function drawDonut() {
   chart.draw(data, options);
 }
 ///--------
-google.charts.setOnLoadCallback(drawStuff);
-
 function drawStuff() {
   var data = new google.visualization.arrayToDataTable([
-    ["Opening Move", "Percentage"],
-    ["King's pawn (e4)", 44],
-    ["Queen's pawn (d4)", 31],
-    ["Knight to King 3 (Nf3)", 12],
-    ["Queen's bishop pawn (c4)", 10],
-    ["Other", 3],
+    ["Afiliados", "Porcentage"],
+    ["Si afiliados", 80],
+    ["No afiliados", 20],
   ]);
 
   var options = {
-    title: "Chess opening moves",
-    width: 900,
-    legend: { position: "none" },
-    chart: {
-      title: "Chess opening moves",
-      subtitle: "popularity by percentage",
-    },
+    title: "Afiliados",
+    width: "100%",
     bars: "horizontal",
     axes: {
       x: {
-        0: { side: "top", label: "Percentage" },
+        0: { side: "top", label: "Porcentage" },
       },
     },
-    bar: { groupWidth: "90%" },
+    bar: { groupWidth: "80%" },
   };
 
   var chart = new google.charts.Bar(document.getElementById("top_x_div"));
