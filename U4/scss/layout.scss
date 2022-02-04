@@ -16,20 +16,21 @@ header {
   h1 {
     color: $white;
     font-family: "Fredoka One", cursive;
-    font-size: 3rem;
+    font-size: 3em;
   }
   figure {
     text-align: center;
     padding: 1rem;
     img {
       display: inline-block;
+      @include size(45%, 100%);
     }
     figcaption {
       display: inline-block;
       color: $white;
       margin: 0;
-      font-family: 'Arvo', serif;
-
+      font-family: "Arvo", serif;
+      font-size: 1em;
     }
   }
 }
@@ -47,6 +48,13 @@ header {
       li {
         text-align: center;
         padding: 1rem;
+        p {
+          margin: 0;
+          padding: 0;
+          color: $white;
+          font-family: "Arvo", serif;
+          font-size: 1em;
+        }
       }
     }
   }
@@ -57,71 +65,95 @@ header {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 25% 25% 25% 25%;
-    justify-content:center;
+    justify-content: center;
     align-content: center;
     justify-items: center;
-
   }
 }
 #line_top_x {
-  @include size(90%, 90%);
+  padding-top: 5px;
+  @include size(95%, 90%);
   grid-column: 1 / span 2;
 }
 #piechart {
   @include size(90%, 90%);
 }
-#donutchart{
+#donutchart {
   @include size(90%, 90%);
-
 }
-#top_x_div{
+#top_x_div {
   @include size(90%, 90%);
-
 }
-#chart_medidores{
+#chart_medidores {
   @include size(90%, 90%);
-
 }
 #chart_areas {
-  @include size(90%, 90%);
+  @include size(95%, 90%);
   grid-column: 1 / span 2;
 }
 
 footer {
   @include size(100%, 100%);
   @include backColor($color5);
-  text-align: center;
   color: $white;
+
   p {
+    display: inline-block;
     padding: 10px;
     margin: 0;
-    font-family: 'Arvo', serif;
+    font-family: "Arvo", serif;
+  }
+  p:nth-child(2) {
+    float: right;
   }
 }
 
+@media screen and (max-width: 768px) {
+  header {
+    justify-content: center;
 
-@media screen and (max-width: 568px) {
-  .container{
-    @include size(100%, 100%);
-    display:inline-block;
-    aside{
-      display:none;
+    .logo {
+      display: none;
     }
-  .graficas{
-    @include size(100%, 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    div{
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
+    h1 {
+      font-size: 2em;
+    }
+    figure {
+      img {
+        @include size(100%, 100%);
+      }
+      figcaption {
+        display: none;
+        font-size: 1em;
+      }
     }
   }
 
+  .container {
+    @include size(100%, 100%);
+    display: inline-block;
+    aside {
+      display: none;
+    }
+    .graficas {
+      @include size(100%, 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      div {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+    }
   }
-  #chart_medidores{
+  #chart_medidores {
     @include size(60%, 60%);
   }
-
+  #chart_areas {
+    @include size(90%, 90%);
+  }
+  #line_top_x {
+    @include size(90%, 90%);
+  }
 }

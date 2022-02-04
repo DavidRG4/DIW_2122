@@ -13,17 +13,20 @@ header {
   header h1 {
     color: #ffffff;
     font-family: "Fredoka One", cursive;
-    font-size: 3rem; }
+    font-size: 3em; }
   header figure {
     text-align: center;
     padding: 1rem; }
     header figure img {
-      display: inline-block; }
+      display: inline-block;
+      width: 45%;
+      height: 100%; }
     header figure figcaption {
       display: inline-block;
       color: #ffffff;
       margin: 0;
-      font-family: 'Arvo', serif; }
+      font-family: "Arvo", serif;
+      font-size: 1em; }
 
 .container {
   display: grid;
@@ -38,6 +41,12 @@ header {
       .container aside ul li {
         text-align: center;
         padding: 1rem; }
+        .container aside ul li p {
+          margin: 0;
+          padding: 0;
+          color: #ffffff;
+          font-family: "Arvo", serif;
+          font-size: 1em; }
   .container .graficas {
     background-color: #81bde7;
     width: 100%;
@@ -50,7 +59,8 @@ header {
     justify-items: center; }
 
 #line_top_x {
-  width: 90%;
+  padding-top: 5px;
+  width: 95%;
   height: 90%;
   grid-column: 1 / span 2; }
 
@@ -71,7 +81,7 @@ header {
   height: 90%; }
 
 #chart_areas {
-  width: 90%;
+  width: 95%;
   height: 90%;
   grid-column: 1 / span 2; }
 
@@ -79,14 +89,28 @@ footer {
   width: 100%;
   height: 100%;
   background-color: #1971b0;
-  text-align: center;
   color: #ffffff; }
   footer p {
+    display: inline-block;
     padding: 10px;
     margin: 0;
-    font-family: 'Arvo', serif; }
+    font-family: "Arvo", serif; }
+  footer p:nth-child(2) {
+    float: right; }
 
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 768px) {
+  header {
+    justify-content: center; }
+    header .logo {
+      display: none; }
+    header h1 {
+      font-size: 2em; }
+    header figure img {
+      width: 100%;
+      height: 100%; }
+    header figure figcaption {
+      display: none;
+      font-size: 1em; }
   .container {
     width: 100%;
     height: 100%;
@@ -105,4 +129,10 @@ footer {
         padding-bottom: 0.5rem; }
   #chart_medidores {
     width: 60%;
-    height: 60%; } }
+    height: 60%; }
+  #chart_areas {
+    width: 90%;
+    height: 90%; }
+  #line_top_x {
+    width: 90%;
+    height: 90%; } }
