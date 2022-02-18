@@ -1,0 +1,3 @@
+body{margin:0 auto;max-width:1024px}.gallery{display:flex;background-color:#000;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch}.gallery img{width:calc(100% / $n)}@media screen and (max-width: 1024px){.gallery img{width:calc(100% / $n)}}@media screen and (max-width: 768px){.gallery img{width:calc(100% / $n)}}@media screen and (max-width: 480px){.gallery img{width:calc(100% / $n)}}
+
+/*# sourceMappingURL=gallery.css.map */
