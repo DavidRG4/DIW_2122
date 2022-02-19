@@ -1,29 +1,43 @@
+/// @author David Rivero Garcia
+/// @since 1.0
+
 $duration: 10s !global;
 
+///
+///Aplica valores iniciales para el elemento afectado por este @mixin
+///
 @mixin reset {
   margin: 0;
   padding: 0;
   text-align: center;
 }
-
+///
+///Aplica valores iniciales para el load
+///
 @mixin reset-load {
   position: absolute;
   content: '';
   left: 0;
   top: 0;
 }
-
+///
+///Aplica un ancho y una altura al elemento afectado por este @mixin
+///@param {NUMBER} Anchura se le introduce la anchura que quiere que se tenga el elemento
+///@param {NUMBER} Altura se le introduce la altura que quiere que se tenga el elemento
+///
 @mixin size($width: 100%, $height: 50px) {
+  width: $width;
+  height: $height;
 }
 
 * {
+  
   @include reset;
 }
 
 .loader{
   display: block;
   position: relative;
-  background: #fff;
   border:2px solid #fff;
   @include size($height: 50px);
 
@@ -34,6 +48,8 @@ $duration: 10s !global;
     @include size(0, $height: 100%);
   }
 
+
+  
   &::after {
     font-size: 30pt;
     color: yellow;
@@ -42,11 +58,51 @@ $duration: 10s !global;
     @include size(100%, 100%);
   }
 }
-
+///
+///Se establecen las @keyframes iniciales y finales para la animacion
+///
 @keyframes load {
-  0% {  }
-  100% {  }
+  0% { width: 0%; }
+  100% { width: 100%; }
 }
+///
+///Se establecen el contenido que va encontrarse cuando se llegan a unos porcentajes concretos 
+///
+@keyframes text_load { 
+  10%{
+    content: '10%';
+  }
+  20%{
+    content: '20%';
+  }
+  30%{
+    content: '30%';
+  }
+  40%{
+    content: '40%';
+  }
 
-@keyframes text_load {
+  50%{
+    content: '50%';
+  }
+
+  60%{
+    content: '60%';
+  }
+
+  70%{
+    content: '70%';
+  }
+
+  80%{
+    content: '80%';
+  }
+
+  90%{
+    content: '90%';
+  }
+
+  100%{
+    content: '100%';
+  }
 }

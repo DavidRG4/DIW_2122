@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "gallery.css",
+	"sources": [
+		"../../src/scss/gallery.scss"
+	],
+	"sourcesContent": [
+		"/// @author David Rivero Garcia\r\n/// @since 1.0\r\n\r\n$MAX_COLUMNS: 4 !default;\r\n$RESPONSIVE_COLUMNS: (\r\n  1024px: 3,\r\n  768px: 2,\r\n  480px: 1,\r\n);\r\n///\r\n///Calcula el numero de columnas que se necesitan\r\n///@param {NUMBER} Columnas numero de columnas que se van a usar\r\n///@return {NUMBER} el numero de columnas\r\n///\r\n@function grid_columns($n) {\r\n  @if ($n > 0) {\r\n  } @else {\r\n  }\r\n}\r\n///\r\n///Establece el ancho de las imagenes en segun el numero de columnas que debe haber\r\n///@param {NUMBER} Columnas numero de columnas que se van a usar\r\n///\r\n@mixin resize($n) {\r\n  .gallery img {\r\n    width: calc(100% / $n);\r\n  }\r\n}\r\n\r\nbody {\r\n  margin: 0 auto;\r\n  max-width: 1024px;\r\n}\r\n\r\n.gallery {\r\n  display: flex;\r\n  background-color: #000;\r\n  flex-direction: row;\r\n  flex-wrap: wrap;\r\n  justify-content: flex-start;\r\n  align-content: stretch;\r\n}\r\n\r\n@include resize($MAX_COLUMNS);\r\n\r\n@each $size, $value in $RESPONSIVE_COLUMNS {\r\n/*Adaptacion para saber en que ancho se encuentra el ancho y numero de columnas que se van a usar*/\r\n  @media screen and (max-width: $size) {\r\n    @include resize($value);\r\n  }\r\n}\r\n"
+	],
+	"names": [],
+	"mappings": "AA6BA,AAAA,IAAI,AAAC,CACH,MAAM,CAAE,MAAM,CACd,SAAS,CAAE,MAAM,CAClB,AAED,AAAA,QAAQ,AAAC,CACP,OAAO,CAAE,IAAI,CACb,gBAAgB,CAAE,IAAI,CACtB,cAAc,CAAE,GAAG,CACnB,SAAS,CAAE,IAAI,CACf,eAAe,CAAE,UAAU,CAC3B,aAAa,CAAE,OAAO,CACvB,AAjBC,AAAA,QAAQ,CAAC,GAAG,AAAC,CACX,KAAK,CAAE,eAAe,CACvB,AAqBD,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,MAAM,EAvBpC,AAAA,QAAQ,CAAC,GAAG,AAAC,CACX,KAAK,CAAE,eAAe,CACvB,CAqBD,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK,EAvBnC,AAAA,QAAQ,CAAC,GAAG,AAAC,CACX,KAAK,CAAE,eAAe,CACvB,CAqBD,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK,EAvBnC,AAAA,QAAQ,CAAC,GAAG,AAAC,CACX,KAAK,CAAE,eAAe,CACvB"
+}

@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run css && webpack --config webpack.prod.js",
-    "css-compile": "node-sass --include-path node_modules --output-style compressed --source-map true --source-map-contents true --precision 6 assets/src/scss -o assets/src/css/",
+    "css-compile": "node-sass --include-path node_modules --output-style compressed --source-map true --source-map-contents true --precision 6 assets/src/scss -o assets/dist/css/",
     "css-prefix": "postcss --replace assets/src/css/styles.css --use autoprefixer --map",
     "css": "npm run css-compile && npm run css-prefix",
-    "watch": "nodemon -e scss -x \"npm run css && webpack --config webpack.dev.js\""
+    "watch": "nodemon -e scss -x \"npm run css && webpack --config webpack.dev.js\"",
+    "gen-doc":"sassdoc assets/src/scss -d assets/dist/sassdoc"
   },
   "author": "David",
   "license": "ISC",

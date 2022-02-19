@@ -1,16 +1,26 @@
+/// @author David Rivero Garcia
+/// @since 1.0
+
 $MAX_COLUMNS: 4 !default;
 $RESPONSIVE_COLUMNS: (
   1024px: 3,
   768px: 2,
   480px: 1,
 );
-
+///
+///Calcula el numero de columnas que se necesitan
+///@param {NUMBER} Columnas numero de columnas que se van a usar
+///@return {NUMBER} el numero de columnas
+///
 @function grid_columns($n) {
   @if ($n > 0) {
   } @else {
   }
 }
-
+///
+///Establece el ancho de las imagenes en segun el numero de columnas que debe haber
+///@param {NUMBER} Columnas numero de columnas que se van a usar
+///
 @mixin resize($n) {
   .gallery img {
     width: calc(100% / $n);
@@ -34,6 +44,7 @@ body {
 @include resize($MAX_COLUMNS);
 
 @each $size, $value in $RESPONSIVE_COLUMNS {
+/*Adaptacion para saber en que ancho se encuentra el ancho y numero de columnas que se van a usar*/
   @media screen and (max-width: $size) {
     @include resize($value);
   }

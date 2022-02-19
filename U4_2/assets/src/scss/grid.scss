@@ -1,3 +1,6 @@
+/// @author David Rivero Garcia
+/// @since 1.0
+
 $grid-width: 100rem;
 $vertical: 4rem;
 $horizontal: 4rem;
@@ -8,15 +11,30 @@ $horizontal: 4rem;
   box-sizing: border-box;
   font-size: 10pt;
 }
+
+///
+///Calcula ancho de las celdas las cuales son divididas en 4
+///@return {NUMBER} devuelve el calculo para el ancho de las celdas divididas en 4
+///
 @function sumof4() {
   $result: calc(3 * ((100% - 3 * #{$horizontal}) / 4)) $return $result;
 }
+///
+///Calcula ancho de las celdas las cuales son divididas en 3
+///@return {NUMBER} devuelve el calculo para el ancho de las celdas divididas en 3
+///
 @function sumof3() {
   $result: calc((100% - 2 * #{$horizontal}) / 3) $return $result;
 }
+
+///
+///Calcula ancho de las celdas las cuales son divididas en 2
+///@return {NUMBER} Ancho de las celdas divididas en 2
+///
 @function sumof2() {
   $result: calc((100% - #{$horizontal}) / 2) $return $result;
 }
+
 .row {
   max-width: $grid-width;
   margin: 0 auto;
